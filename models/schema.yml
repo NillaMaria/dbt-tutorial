@@ -1,6 +1,23 @@
 version: 2
 
 models: 
+  - name: order_payment_method_amounts
+    description: "{{ doc('order_payment_method_amounts') }}"
+    columns: 
+      - name: order_id
+        description: primary key of the model
+        tests:
+          - unique
+          - not_null          
+      - name: credit_card_amount
+        description: How much of order payment was paid with credit card  
+      - name: bank_transfer_amount
+        description: How much of order payment was paid with credit card
+      - name: coupon_amount
+        description: How much of order payment was paid with credit card 
+      - name: gift_card_amount
+        description: How much of order payment was paid with credit card    
+
   - name: customers
     description: "{{ doc('customers') }}"
     columns: 
@@ -10,7 +27,7 @@ models:
           - unique
           - not_null
       - name: first_order_date
-        description: NULL when a customer has not yet placed an order.  
+        description: NULL when a customer has not yet placed an order.
 
   - name: stg_customers
     description: This model cleans up customer data

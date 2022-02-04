@@ -15,7 +15,7 @@ profile: 'jaffle_shop'
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
-seed-paths: ["seeds"]
+seed-paths: ["data/seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
